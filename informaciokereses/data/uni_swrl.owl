@@ -1,0 +1,1369 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tomi/ontologies/uni#"
+     xml:base="http://www.semanticweb.org/tomi/ontologies/uni"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:tantargyak="http://www.iir.mit.bme.hu/kgtlab/2019/7/tantargyak#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tomi/ontologies/uni"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#alairasa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#alairasa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#alairas"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#hallgatoja"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#erdemjegye -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegye">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#felelose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#felelose">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#oktatoja"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tanar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#hallgatoja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#hallgatoja">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#kreditje -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#kreditje">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#kredit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#neve -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#neve">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#nev"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#oktatoja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#oktatoja">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tanar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#tantargya -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#tantargya">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#alairas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#alairas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#kredit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#kredit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#nev -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#nev">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#EminensHallgato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#EminensHallgato">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Hallgato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tanar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#alairas"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Szemely -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Tanar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Tanar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Tantargy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Algel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Algel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Bsz2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#BukottBsz2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#BukottBsz2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#algel_beir_bukott"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#bsz2_bukott_beir"/>
+        <nev>Bsz2-t bukott hallgato</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#HF_hallgato2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#HF_hallgato2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#algel_sikeres"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#mi_beir_2"/>
+        <nev>Szabályosan felveheti a MIHF tárgyat</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#HF_hallgato3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#HF_hallgato3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#algel_sikeres"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_3"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#mi_beir_3"/>
+        <nev>Szabályosan felveheti a MIHF tárgyat</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#MI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#MI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#MIHF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#MIHF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#MIHallgato1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#MIHallgato1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#algel_sikeres"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#regiMI_beir"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#ujmi_beir"/>
+        <nev>Szabályosan felveheti az MI-t</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#MIHallgato2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#MIHallgato2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#regiMI_teljes"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#ujmi_hibas_beir"/>
+        <nev>Nem veheti fel az MI tárgyat</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#RegiMI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#RegiMI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#TeljesitettBsz2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#TeljesitettBsz2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#algel_beir_teljesitett_bsz2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#sikeres_bsz2_beir"/>
+        <nev>Bsz2-t teljesített hallgató</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#algel_beir_bukott -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#algel_beir_bukott">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Algel"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#algel_beir_teljesitett_bsz2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#algel_beir_teljesitett_bsz2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Algel"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#algel_sikeres -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#algel_sikeres">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <hallgatoja rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHallgato2"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Algel"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#bsz2_bukott_beir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#bsz2_bukott_beir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#hf_beir_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#mi_beir_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#mi_beir_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MI"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#mi_beir_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#mi_beir_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MI"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#regiMI_beir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#regiMI_beir">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#RegiMI"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#regiMI_teljes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#regiMI_teljes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#RegiMI"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#sikeres_bsz2_beir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#sikeres_bsz2_beir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#ujmi_beir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#ujmi_beir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MI"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#ujmi_hibas_beir -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#ujmi_hibas_beir">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MI"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#b2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#jegy">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#b3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#szb">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#s2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#s3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#h1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#h2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#h3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#b1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b1"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h1"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h2"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h3"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h1"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h3"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h2"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegye"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#jegy"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+                                                        <swrl:dataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#jegy"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Algel"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#RegiMI"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#jegy"/>
+                                                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swrl:argument2>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                <rdf:first>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                                                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MI"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
+                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b3"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Algel"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MI"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#tantargya"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#MIHF"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SzabalyosBeiratkozas"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#b2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#s2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#s3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#s1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#s3"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#s2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#EminensHallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

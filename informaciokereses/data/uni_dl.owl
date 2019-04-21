@@ -1,0 +1,2121 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tomi/ontologies/uni#"
+     xml:base="http://www.semanticweb.org/tomi/ontologies/uni"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:tantargyak="http://www.iir.mit.bme.hu/kgtlab/2019/7/tantargyak#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tomi/ontologies/uni"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#hallgatoja"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#felelose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#felelose">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#oktatoja"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tanar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#hallgatoja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#hallgatoja">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#kreditje -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#kreditje">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#kredit"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#neve -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#neve">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#nev"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#oktatoja -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#oktatoja">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tanar"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#tantargya -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#tantargya">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#alairas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#alairas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#kredit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#kredit">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#nev -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#nev">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#EminensHallgato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#EminensHallgato">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Hallgato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tanar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</owl:hasValue>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#erdemjegy"/>
+                                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</owl:hasValue>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#alairas"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Beiratkozas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Szemely -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Tanar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Tanar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Szemely"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Tantargy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Algel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Algel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#Bsz2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 0</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 1</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 10</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 11</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 12</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 13</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 14</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 15</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 16</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 17</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 18</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 19</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 2</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 20</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 21</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 22</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 23</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 24</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 25</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 26</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 27</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 28</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 29</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 3</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 4</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 5</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 6</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 7</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 8</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#H9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#H9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_0"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_1"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_2"/>
+        <beiratkozasa rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_3"/>
+        <nev rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallgato 9</nev>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#MI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#MI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#MIHF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#MIHF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#RégiMI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#RégiMI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#T0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#T0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#T1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#T1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#T2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#T2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#T3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#T3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#T4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#T4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Tantargy"/>
+        <kredit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</kredit>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H0_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H10_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H11_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H12_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H13_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H14_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H15_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H16_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H17_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H18_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H19_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H1_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H20_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H21_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H22_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H23_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H24_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H25_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H26_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H27_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H28_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H29_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H2_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H3_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H4_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H5_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H6_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H7_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H8_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_0">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Bsz2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_1">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T0"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_2">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T1"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozas_H9_3">
+        <tantargya rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#T2"/>
+        <alairas rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</alairas>
+        <erdemjegy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</erdemjegy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#szb1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#szb2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/tomi/ontologies/uni#szb3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#Hallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#SikeresTeljesites"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb3"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#beiratkozasa"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#szb3"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#EminensHallgato"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/tomi/ontologies/uni#h"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
