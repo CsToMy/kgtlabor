@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://a.com/ontology/family#"
-     xml:base="http://a.com/ontology/family"
+<rdf:RDF xmlns="http://www.semanticweb.org/tomi/ontologies/family#"
+     xml:base="http://www.semanticweb.org/tomi/ontologies/family"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -128,7 +128,6 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tomi/ontologies/family#hasLastWill">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#LastWill"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
     </owl:ObjectProperty>
     
@@ -420,14 +419,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/tomi/ontologies/family#LastWill -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/family#LastWill">
-        <rdfs:comment>Végrendeletet szimbolizálja.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/tomi/ontologies/family#Male -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Male">
@@ -715,11 +706,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Anya22">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa1"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</family:age>
-        <family:name>Kiss Kata</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa1"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</age>
+        <name>Kiss Kata</name>
     </owl:NamedIndividual>
     
 
@@ -728,12 +719,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Anya33">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa3"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</family:age>
-        <family:name>Kovács Zsuzsanna</family:name>
+        <hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa3"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+        <name>Kovács Zsuzsanna</name>
     </owl:NamedIndividual>
     
 
@@ -742,9 +733,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Anya44">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</family:age>
-        <family:name>Fokorné Judit</family:name>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+        <name>Fokorné Judit</name>
     </owl:NamedIndividual>
     
 
@@ -753,11 +744,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Apa11">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa1"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</family:age>
-        <family:name>Kiss János</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa1"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</age>
+        <name>Kiss János</name>
     </owl:NamedIndividual>
     
 
@@ -766,12 +757,12 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Apa22">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya22"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa2"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama2"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</family:age>
-        <family:name>Nagy Ferenc</family:name>
+        <hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya22"/>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa2"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama2"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
+        <name>Nagy Ferenc</name>
     </owl:NamedIndividual>
     
 
@@ -780,10 +771,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Apa44">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya44"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</family:age>
-        <family:name>Fokor Imre</family:name>
+        <hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya44"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</age>
+        <name>Fokor Imre</name>
     </owl:NamedIndividual>
     
 
@@ -800,11 +791,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Gyermek111">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya33"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</family:age>
-        <family:name>Kiss Tamás</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya33"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+        <name>Kiss Tamás</name>
     </owl:NamedIndividual>
     
 
@@ -813,11 +804,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Gyermek112">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya33"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</family:age>
-        <family:name>Kiss Lili</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya33"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</age>
+        <name>Kiss Lili</name>
     </owl:NamedIndividual>
     
 
@@ -826,11 +817,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Gyermek113">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya33"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</family:age>
-        <family:name>Kiss Noémi</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa11"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya33"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</age>
+        <name>Kiss Noémi</name>
     </owl:NamedIndividual>
     
 
@@ -839,11 +830,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Gyermek221">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa22"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya22"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</family:age>
-        <family:name>Nagy Zoltán</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa22"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya22"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</age>
+        <name>Nagy Zoltán</name>
     </owl:NamedIndividual>
     
 
@@ -852,11 +843,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Gyermek441">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa44"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya44"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</family:age>
-        <family:name>Fokor Tamás</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa44"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya44"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</age>
+        <name>Fokor Tamás</name>
     </owl:NamedIndividual>
     
 
@@ -865,20 +856,18 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Gyermek442">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa44"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya44"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</family:age>
-        <family:name>Fokor Gergő</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Apa44"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Anya44"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</age>
+        <name>Fokor Gergő</name>
     </owl:NamedIndividual>
     
 
 
     <!-- http://www.semanticweb.org/tomi/ontologies/family#LastWill1 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#LastWill1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#LastWill"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#LastWill1"/>
     
 
 
@@ -894,10 +883,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa1">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</family:age>
-        <family:name>Kiss Antal</family:name>
+        <hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</age>
+        <name>Kiss Antal</name>
     </owl:NamedIndividual>
     
 
@@ -906,10 +895,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa2">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama2"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</family:age>
-        <family:name>Nagy Tamás</family:name>
+        <hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama2"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</age>
+        <name>Nagy Tamás</name>
     </owl:NamedIndividual>
     
 
@@ -918,10 +907,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa3">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</family:age>
-        <family:name>Kovács István</family:name>
+        <hasConsort rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Male"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</age>
+        <name>Kovács István</name>
     </owl:NamedIndividual>
     
 
@@ -930,10 +919,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Nagymama1">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasLastWill rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#LastWill1"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</family:age>
-        <family:name>Kissné-Piros Boglárka</family:name>
+        <hasLastWill rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#LastWill1"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</age>
+        <name>Kissné-Piros Boglárka</name>
     </owl:NamedIndividual>
     
 
@@ -942,9 +931,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Nagymama2">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</family:age>
-        <family:name>Hubo Klára</family:name>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</age>
+        <name>Hubo Klára</name>
     </owl:NamedIndividual>
     
 
@@ -953,9 +942,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</family:age>
-        <family:name>Kovácsné-Szántó Réka</family:name>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</age>
+        <name>Kovácsné-Szántó Réka</name>
     </owl:NamedIndividual>
     
 
@@ -964,11 +953,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tomi/ontologies/family#No33">
         <rdf:type rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Person"/>
-        <family:hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa3"/>
-        <family:hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3"/>
-        <family:hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
-        <family:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</family:age>
-        <family:name>Kovács Ibolya</family:name>
+        <hasFather rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagyapa3"/>
+        <hasMother rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Nagymama3"/>
+        <hasSex rdf:resource="http://www.semanticweb.org/tomi/ontologies/family#Female"/>
+        <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</age>
+        <name>Kovács Ibolya</name>
     </owl:NamedIndividual>
     <rdf:Description>
         <swrl:argument1 rdf:resource="http://a.com/ontology#y"/>
